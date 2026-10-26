@@ -1,0 +1,126 @@
+/**
+ * Mer Florist Typography Styles
+ * Strictly follows Brand Design Guidelines:
+ * - Elsie Swash Caps for H1, H2 (no all-caps, no body text)
+ * - Montserrat for all interface, navigation, body, buttons, and prices
+ * - Base font size >= 16px
+ */
+
+/* Google Fonts Import with display=swap for high performance */
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Display Headings with Elsie Swash Caps */
+.font-display,
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--line-height-tight);
+  color: var(--color-text-main);
+  text-transform: none; /* Elsie Swash Caps must not be forced to ALL-CAPS */
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Specific heading sizes */
+h1, .text-h1 {
+  font-size: clamp(2rem, 4vw + 1rem, var(--font-size-4xl)); /* Responsive: 32px to 44px */
+  font-weight: 400;
+  margin-bottom: var(--space-4);
+}
+
+h2, .text-h2 {
+  font-size: clamp(1.625rem, 2.5vw + 1rem, var(--font-size-2xl)); /* Responsive: 26px to 30px */
+  margin-bottom: var(--space-3);
+}
+
+/* Secondary Headings & Interface titles (Montserrat) */
+h3, .text-h3 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xl); /* 24px */
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-2);
+}
+
+h4, .text-h4 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-lg); /* 20px */
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-main);
+}
+
+h5, .text-h5 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-md); /* 18px */
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-main);
+}
+
+/* Body & Content */
+p {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base); /* >= 16px */
+  line-height: var(--line-height-normal); /* 1.6 */
+  color: var(--color-text-main);
+  margin-bottom: var(--space-4);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lead paragraph */
+.text-lead {
+  font-size: var(--font-size-md); /* 18px */
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* Sub-text and captions */
+.text-secondary {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* Price typography specification */
+.price-display {
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.price-display.price-lg {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.price-original {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  margin-left: var(--space-2);
+}
+
+/* Brand badge / subtitle */
+.brand-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-primary);
+  display: inline-block;
+  margin-bottom: var(--space-2);
+}
